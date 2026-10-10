@@ -1,0 +1,139 @@
+/* ==========================================================================
+   DESIGN TOKENS — MASTER UNDANGAN DIGITAL PERNIKAHAN
+   Based on PRD Section 6
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Colors — Primary Wine & Burgundy
+     ------------------------------------------------------------------------ */
+  --wine-900: #5E171B;
+  --wine-800: #711D22;
+  --wine-700: #7A2025;
+  --burgundy-600: #922F35;
+
+  /* ------------------------------------------------------------------------
+     Colors — Dusty Rose Accent
+     ------------------------------------------------------------------------ */
+  --dusty-rose-500: #C98782;
+  --dusty-rose-300: #D9A9A3;
+  --rose-soft-200: #E8C4BD;
+
+  /* ------------------------------------------------------------------------
+     Colors — Cream & Ivory Backgrounds
+     ------------------------------------------------------------------------ */
+  --cream-100: #F8F2EA;
+  --ivory-50: #FFFDF8;
+  --paper: #FBF7F1;
+
+  /* ------------------------------------------------------------------------
+     Colors — Luxury Gold Accents
+     ------------------------------------------------------------------------ */
+  --gold-600: #B88A3D;
+  --gold-500: #C7A15A;
+  --gold-300: #E1C98E;
+
+  /* ------------------------------------------------------------------------
+     Colors — Charcoal & Text
+     ------------------------------------------------------------------------ */
+  --charcoal-900: #25201E;
+  --black-soft: #161413;
+  --muted: #756B66;
+  --white: #FFFFFF;
+
+  /* ------------------------------------------------------------------------
+     Colors — Semantic Status (Wedding-toned)
+     ------------------------------------------------------------------------ */
+  --status-hadir-bg: rgba(34, 120, 65, 0.10);
+  --status-hadir-text: #1a6b35;
+  --status-hadir-border: rgba(34, 120, 65, 0.25);
+  --status-tidak-bg: rgba(146, 34, 39, 0.08);
+  --status-tidak-text: #922227;
+  --status-tidak-border: rgba(146, 34, 39, 0.22);
+  --status-ragu-bg: rgba(180, 120, 20, 0.09);
+  --status-ragu-text: #8a5510;
+  --status-ragu-border: rgba(180, 120, 20, 0.25);
+  --status-success-bg: rgba(34, 120, 65, 0.10);
+  --status-success-text: #1a6b35;
+
+  /* ------------------------------------------------------------------------
+     Typography
+     - Couple/script: 'Great Vibes'
+     - Heading serif: 'Cormorant Garamond'
+     - Body sans: 'Montserrat'
+     ------------------------------------------------------------------------ */
+  --font-script: 'Great Vibes', cursive;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Font Scale */
+  --text-2xs: 11px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --title-sm: 28px;
+  --title-md: 36px;
+  --title-lg: 48px;
+  --script-mobile: 52px;
+  --script-desktop: 76px;
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+
+  /* ------------------------------------------------------------------------
+     Spacing Scale
+     4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96 px
+     ------------------------------------------------------------------------ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Section Padding */
+  --section-padding-mobile: 64px 20px;
+  --section-padding-desktop: 88px 24px;
+
+  /* ------------------------------------------------------------------------
+     Radius
+     ------------------------------------------------------------------------ */
+  --radius-pill: 999px;
+  --radius-card-lg: 24px;
+  --radius-card-sm: 16px;
+  --radius-img: 24px;
+  --radius-arch: 140px 140px 0 0;
+
+  /* ------------------------------------------------------------------------
+     Box Shadows
+     ------------------------------------------------------------------------ */
+  --shadow-card: 0 12px 34px rgba(45, 24, 20, 0.10);
+  --shadow-card-hover: 0 16px 40px rgba(45, 24, 20, 0.14);
+  --shadow-sm: 0 4px 16px rgba(45, 24, 20, 0.06);
+  --shadow-gold: 0 4px 20px rgba(184, 138, 61, 0.25);
+  --shadow-floating: 0 8px 24px rgba(94, 23, 27, 0.25);
+
+  /* ------------------------------------------------------------------------
+     Layout Container
+     ------------------------------------------------------------------------ */
+  --container-max-width: 480px;
+
+  /* ------------------------------------------------------------------------
+     Transitions
+     ------------------------------------------------------------------------ */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-cover: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

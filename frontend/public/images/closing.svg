@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="closingBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b0f12" />
+      <stop offset="50%" stop-color="#230a0c" />
+      <stop offset="100%" stop-color="#120405" />
+    </linearGradient>
+    <linearGradient id="closingGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1C98E" />
+      <stop offset="100%" stop-color="#C7A15A" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="700" fill="url(#closingBg)" />
+  <circle cx="300" cy="320" r="180" fill="#7A2025" fill-opacity="0.3" filter="blur(20px)" />
+
+  <!-- Elegant Traditional Couple Silhouette Outlines -->
+  <circle cx="260" cy="300" r="30" fill="#E8C4BD" opacity="0.8" />
+  <circle cx="340" cy="315" r="28" fill="#F8F2EA" opacity="0.85" />
+  
+  <path d="M230 288 C 240 260, 280 260, 290 288 Z" fill="#C7A15A" />
+  <polygon points="315,300 340,255 365,300" fill="#E1C98E" />
+
+  <path d="M215 350 C 215 340, 245 335, 260 335 C 275 335, 305 340, 305 350 V 480 H 215 Z" fill="#5E171B" />
+  <path d="M300 365 C 300 355, 325 350, 340 350 C 360 350, 385 355, 385 365 V 480 H 300 Z" fill="#711D22" />
+</svg>

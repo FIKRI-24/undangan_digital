@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 24" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="divLineL" x1="10" y1="12" x2="105" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C7A15A" stop-opacity="0" />
+      <stop offset="60%" stop-color="#C7A15A" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#B88A3D" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="divLineR" x1="175" y1="12" x2="270" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B88A3D" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#C7A15A" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#C7A15A" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="divGoldCenter" x1="140" y1="2" x2="140" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="50%" stop-color="#C7A15A" />
+      <stop offset="100%" stop-color="#B88A3D" />
+    </linearGradient>
+  </defs>
+
+  <!-- FLANKING HAIRLINE FLOURISH LINES -->
+  <line x1="12" y1="12" x2="104" y2="12" stroke="url(#divLineL)" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="102" cy="12" r="1.4" fill="#C7A15A" />
+
+  <line x1="176" y1="12" x2="268" y2="12" stroke="url(#divLineR)" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="178" cy="12" r="1.4" fill="#C7A15A" />
+
+  <!-- CENTER MINI GONJONG ROOF (4 HORNS) -->
+  <path d="M 114 5
+           C 116 11, 120 16, 124 18
+           C 126 15, 127 11, 129 7
+           C 131 12, 134 16, 140 16
+           C 146 16, 149 12, 151 7
+           C 153 11, 154 15, 156 18
+           C 160 16, 164 11, 166 5
+           C 164 12, 160 18, 154 20
+           Q 140 22, 126 20
+           C 120 18, 116 12, 114 5 Z"
+        fill="url(#divGoldCenter)"
+        stroke="#E1C98E"
+        stroke-width="0.7" />
+
+  <!-- MINI SPIRES ON HORN TIPS -->
+  <line x1="114" y1="5" x2="114" y2="2" stroke="#F3E5AB" stroke-width="1" stroke-linecap="round" />
+  <line x1="129" y1="7" x2="129" y2="4" stroke="#F3E5AB" stroke-width="0.9" stroke-linecap="round" />
+  <line x1="151" y1="7" x2="151" y2="4" stroke="#F3E5AB" stroke-width="0.9" stroke-linecap="round" />
+  <line x1="166" y1="5" x2="166" y2="2" stroke="#F3E5AB" stroke-width="1" stroke-linecap="round" />
+
+  <!-- CENTER ACCENT JEWEL -->
+  <circle cx="140" cy="15" r="1.2" fill="#FFF8E7" />
+  <polygon points="140,11 141.5,13.5 140,15 138.5,13.5" fill="#FFF8E7" />
+</svg>

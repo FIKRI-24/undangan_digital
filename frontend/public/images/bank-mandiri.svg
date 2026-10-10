@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <!-- Mandiri Badge -->
+  <rect width="160" height="50" rx="8" fill="#003D79" />
+  <text x="24" y="32" font-family="'Montserrat', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF" letter-spacing="1">mandiri</text>
+  <!-- Gold wave arc -->
+  <path d="M125 15 C 135 15, 145 22, 150 35 C 145 30, 135 25, 125 25 Z" fill="#FDB813" />
+</svg>

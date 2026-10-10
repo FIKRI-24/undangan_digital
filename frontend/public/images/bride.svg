@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brideBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBF7F1" />
+      <stop offset="100%" stop-color="#F8F2EA" />
+    </linearGradient>
+    <linearGradient id="goldCrown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3DFAB" />
+      <stop offset="50%" stop-color="#C7A15A" />
+      <stop offset="100%" stop-color="#B88A3D" />
+    </linearGradient>
+    <clipPath id="archClipBride">
+      <path d="M40 480 V 160 A 160 160 0 0 1 360 160 V 480 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Arch Frame Background -->
+  <path d="M40 480 V 160 A 160 160 0 0 1 360 160 V 480 Z" fill="url(#brideBg)" />
+  <path d="M40 480 V 160 A 160 160 0 0 1 360 160 V 480 Z" stroke="url(#goldCrown)" stroke-width="2" fill="none" />
+  <path d="M48 480 V 168 A 152 152 0 0 1 352 168 V 480 Z" stroke="url(#goldCrown)" stroke-width="0.8" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+
+  <!-- Inside Clipped Content -->
+  <g clip-path="url(#archClipBride)">
+    <!-- Ambient tone -->
+    <rect x="40" y="0" width="320" height="500" fill="#2d1013" />
+
+    <!-- Head -->
+    <circle cx="200" cy="220" r="42" fill="#F8F2EA" />
+
+    <!-- Minang Suntiang (Tiered Crown Headdress) -->
+    <!-- Tier 1 Base -->
+    <path d="M140 215 C 145 170, 255 170, 260 215 Z" fill="#C7A15A" />
+    <!-- Tier 2 Middle -->
+    <path d="M150 175 C 160 135, 240 135, 250 175 Z" fill="#E1C98E" />
+    <!-- Tier 3 Spikes & Ornaments -->
+    <polygon points="160,145 180,95 200,140" fill="#C7A15A" />
+    <polygon points="185,135 200,80 215,135" fill="#E1C98E" />
+    <polygon points="200,140 220,95 240,145" fill="#C7A15A" />
+    
+    <!-- Crown Finial Jewels -->
+    <circle cx="200" cy="75" r="5" fill="#B88A3D" />
+    <circle cx="180" cy="90" r="4" fill="#C7A15A" />
+    <circle cx="220" cy="90" r="4" fill="#C7A15A" />
+    <circle cx="160" cy="115" r="3.5" fill="#E1C98E" />
+    <circle cx="240" cy="115" r="3.5" fill="#E1C98E" />
+
+    <!-- Shoulders & Attire (Rich Maroon Kebaya + Selendang Minang) -->
+    <path d="M120 280 C 140 255, 260 255, 280 280 L 310 480 H 90 Z" fill="#711D22" />
+    <!-- Songket sash diagonal across chest -->
+    <polygon points="135,275 165,265 265,480 235,480" fill="#922F35" />
+    <polygon points="135,275 165,265 265,480 235,480" stroke="#C7A15A" stroke-width="1.5" fill-opacity="0.8" />
+    <!-- Traditional Kalung / Necklace -->
+    <path d="M170 260 Q 200 290 230 260" stroke="#E1C98E" stroke-width="2.5" fill="none" />
+    <circle cx="200" cy="278" r="4" fill="#C7A15A" />
+  </g>
+</svg>

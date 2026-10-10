@@ -1,0 +1,620 @@
+/* ==========================================================================
+   GLOBALS & BASE LAYOUT — MASTER UNDANGAN DIGITAL PERNIKAHAN
+   Based on PRD Section 6, 7, 24
+   ========================================================================== */
+
+@import './tokens.css';
+@import './animations.css';
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--charcoal-900);
+  background-color: #1a1615; /* Desktop backdrop for elegant mobile container */
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lock scrolling when cover is open */
+body.scroll-locked {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   PRIMARY CONTAINER: MOBILE-FIRST INVITATION SHELL
+   PRD Section 6.4: max-width 480px, centered, mobile-first
+   Crafted as 300gsm Fine Cotton Letterpress Stationery
+   ========================================================================== */
+.invitation-shell {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  overflow: clip;
+  background-color: var(--cream-100);
+  color: var(--charcoal-900);
+  box-shadow:
+    0 0 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(199, 161, 90, 0.22);
+}
+
+/* Tactile Cotton Paper Grain Overlay across the entire invitation sheet */
+.invitation-shell::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--container-max-width);
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Continuous Subtle Vertical Stationery Margin Hairlines */
+.invitation-shell::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  right: 12px;
+  border-left: 1px solid rgba(199, 161, 90, 0.14);
+  border-right: 1px solid rgba(199, 161, 90, 0.14);
+  pointer-events: none;
+  z-index: 4;
+}
+
+@media (max-width: 480px) {
+  .invitation-shell {
+    box-shadow: none;
+  }
+}
+
+/* ==========================================================================
+   SECTION BASE STYLES
+   ========================================================================== */
+.invitation-section {
+  position: relative;
+  width: 100%;
+  padding: 76px 26px;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(199, 161, 90, 0.14);
+}
+
+@media (min-width: 481px) {
+  .invitation-section {
+    padding: 92px 34px;
+  }
+}
+
+/* Alternating Section Backgrounds */
+.section-cream {
+  background-color: var(--cream-100);
+}
+
+.section-ivory {
+  background-color: var(--ivory-50);
+}
+
+.section-paper {
+  background-color: var(--paper);
+}
+
+.section-wine {
+  background-color: var(--wine-900);
+  color: var(--ivory-50);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & EDITORIAL CHAPTER HEADERS
+   ========================================================================== */
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Text Colors */
+.text-wine-900 { color: var(--wine-900); }
+.text-wine-700 { color: var(--wine-700); }
+.text-burgundy { color: var(--burgundy-600); }
+.text-dusty-rose { color: var(--dusty-rose-500); }
+.text-gold-600 { color: var(--gold-600); }
+.text-gold-500 { color: var(--gold-500); }
+.text-gold-300 { color: var(--gold-300); }
+.text-charcoal { color: var(--charcoal-900); }
+.text-muted { color: var(--muted); }
+.text-white { color: var(--white); }
+.text-ivory { color: var(--ivory-50); }
+
+/* Editorial Chapter Index (Replaces SaaS Pill Badges) */
+.editorial-chapter-index {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.editorial-chapter-line {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, var(--gold-500));
+}
+
+.editorial-chapter-roman {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.28em;
+  color: var(--gold-600);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Headings */
+.title-script {
+  font-family: var(--font-script);
+  font-size: var(--script-mobile);
+  line-height: 1.1;
+  color: var(--wine-700);
+  font-weight: normal;
+}
+
+@media (min-width: 481px) {
+  .title-script {
+    font-size: var(--script-desktop);
+  }
+}
+
+.title-section {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 7.5vw, 40px);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--wine-800);
+  line-height: 1.15;
+  margin-bottom: var(--space-3);
+}
+
+.subtitle-section {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.75;
+  max-width: 350px;
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   COUTURE BUTTONS (Fine Letterpress & Foil Aesthetic)
+   ========================================================================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--wine-900);
+  color: var(--ivory-50);
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: 1px solid var(--gold-500);
+  box-shadow:
+    inset 0 0 0 3px rgba(199, 161, 90, 0.15),
+    0 8px 20px rgba(45, 24, 20, 0.14);
+  cursor: pointer;
+  min-height: 46px;
+  min-width: 150px;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  position: relative;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--wine-800);
+  box-shadow:
+    inset 0 0 0 3px rgba(225, 201, 142, 0.28),
+    0 12px 26px rgba(45, 24, 20, 0.22);
+  border-color: var(--gold-300);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--wine-800);
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid var(--gold-500);
+  cursor: pointer;
+  min-height: 44px;
+  transition: all var(--transition-normal);
+}
+
+.btn-outline:hover {
+  background: rgba(199, 161, 90, 0.1);
+  border-color: var(--wine-700);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--gold-600) 0%, var(--gold-500) 100%);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-gold);
+  min-height: 44px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+/* ==========================================================================
+   PASSE-PARTOUT STATIONERY PLAQUES (Replaces Generic SaaS Box Cards)
+   ========================================================================== */
+.wedding-card {
+  background-color: var(--ivory-50);
+  border-radius: 4px;
+  padding: 32px 24px;
+  box-shadow: 0 14px 36px rgba(37, 32, 30, 0.05);
+  border: 1px solid rgba(199, 161, 90, 0.42);
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Inner Double-Hairline Engraving Border */
+.wedding-card::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 0.5px solid rgba(199, 161, 90, 0.28);
+  pointer-events: none;
+}
+
+.wedding-card:hover {
+  box-shadow: 0 18px 44px rgba(37, 32, 30, 0.08);
+}
+
+/* ==========================================================================
+   DECORATIVE DIVIDERS & ORNAMENTS
+   PRD Section 24
+   ========================================================================== */
+.divider-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-4) auto;
+  width: 100%;
+  max-width: 220px;
+}
+
+.divider-gold::before,
+.divider-gold::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-500));
+}
+
+.divider-gold::after {
+  background: linear-gradient(to left, transparent, var(--gold-500));
+}
+
+.divider-diamond {
+  width: 7px;
+  height: 7px;
+  background-color: var(--gold-500);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Ornamental Overlay Containers */
+.ornament-container {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ornament-top-left {
+  top: 0;
+  left: 0;
+}
+
+.ornament-top-right {
+  top: 0;
+  right: 0;
+}
+
+.ornament-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.wedding-footer {
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  background-color: var(--black-soft);
+  color: var(--muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  line-height: var(--leading-normal);
+}
+
+.wedding-footer .footer-brand {
+  color: var(--gold-500);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & FOCUS
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   AOS (ANIMATE ON SCROLL) SAFEGUARDS
+   ========================================================================== */
+html, body {
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-CLIENT THEME CUSTOMIZATION ENGINE
+   Supports per-client ornament styles, photo frame shapes, particles & overlays
+   ========================================================================== */
+
+/* 1. Ornament Style: "floral" (Hides Minang Gonjong roofs/watermarks, replaces Gonjong divider with sleek Gold Line) */
+[data-ornament-style="floral"] .cover-gonjong-wrapper,
+[data-ornament-style="floral"] .couple-gonjong-watermark,
+[data-ornament-style="floral"] .gift-gonjong-watermark,
+[data-ornament-style="floral"] .closing-gonjong-bottom {
+  display: none !important;
+}
+
+[data-ornament-style="floral"] .gonjong-decoration img,
+[data-ornament-style="minimal"] .gonjong-decoration img {
+  display: none !important;
+}
+
+[data-ornament-style="floral"] .quote-gonjong-divider,
+[data-ornament-style="floral"] .couple-gonjong-divider,
+[data-ornament-style="floral"] .countdown-gonjong-divider,
+[data-ornament-style="floral"] .event-gonjong-divider,
+[data-ornament-style="floral"] .story-gonjong-divider,
+[data-ornament-style="floral"] .gallery-gonjong-divider,
+[data-ornament-style="floral"] .gift-gonjong-divider,
+[data-ornament-style="floral"] .rsvp-gonjong-divider,
+[data-ornament-style="floral"] .closing-gonjong-divider,
+[data-ornament-style="minimal"] .quote-gonjong-divider,
+[data-ornament-style="minimal"] .couple-gonjong-divider,
+[data-ornament-style="minimal"] .countdown-gonjong-divider,
+[data-ornament-style="minimal"] .event-gonjong-divider,
+[data-ornament-style="minimal"] .story-gonjong-divider,
+[data-ornament-style="minimal"] .gallery-gonjong-divider,
+[data-ornament-style="minimal"] .gift-gonjong-divider,
+[data-ornament-style="minimal"] .rsvp-gonjong-divider,
+[data-ornament-style="minimal"] .closing-gonjong-divider {
+  width: 140px;
+  height: 12px;
+  opacity: 0.75 !important;
+  position: relative;
+}
+
+[data-ornament-style="floral"] .quote-gonjong-divider::before,
+[data-ornament-style="floral"] .couple-gonjong-divider::before,
+[data-ornament-style="floral"] .countdown-gonjong-divider::before,
+[data-ornament-style="floral"] .event-gonjong-divider::before,
+[data-ornament-style="floral"] .story-gonjong-divider::before,
+[data-ornament-style="floral"] .gallery-gonjong-divider::before,
+[data-ornament-style="floral"] .gift-gonjong-divider::before,
+[data-ornament-style="floral"] .rsvp-gonjong-divider::before,
+[data-ornament-style="floral"] .closing-gonjong-divider::before,
+[data-ornament-style="minimal"] .quote-gonjong-divider::before,
+[data-ornament-style="minimal"] .couple-gonjong-divider::before,
+[data-ornament-style="minimal"] .countdown-gonjong-divider::before,
+[data-ornament-style="minimal"] .event-gonjong-divider::before,
+[data-ornament-style="minimal"] .story-gonjong-divider::before,
+[data-ornament-style="minimal"] .gallery-gonjong-divider::before,
+[data-ornament-style="minimal"] .gift-gonjong-divider::before,
+[data-ornament-style="minimal"] .rsvp-gonjong-divider::before,
+[data-ornament-style="minimal"] .closing-gonjong-divider::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-500), transparent);
+}
+
+[data-ornament-style="floral"] .quote-gonjong-divider::after,
+[data-ornament-style="floral"] .couple-gonjong-divider::after,
+[data-ornament-style="floral"] .countdown-gonjong-divider::after,
+[data-ornament-style="floral"] .event-gonjong-divider::after,
+[data-ornament-style="floral"] .story-gonjong-divider::after,
+[data-ornament-style="floral"] .gallery-gonjong-divider::after,
+[data-ornament-style="floral"] .gift-gonjong-divider::after,
+[data-ornament-style="floral"] .rsvp-gonjong-divider::after,
+[data-ornament-style="floral"] .closing-gonjong-divider::after,
+[data-ornament-style="minimal"] .quote-gonjong-divider::after,
+[data-ornament-style="minimal"] .couple-gonjong-divider::after,
+[data-ornament-style="minimal"] .countdown-gonjong-divider::after,
+[data-ornament-style="minimal"] .event-gonjong-divider::after,
+[data-ornament-style="minimal"] .story-gonjong-divider::after,
+[data-ornament-style="minimal"] .gallery-gonjong-divider::after,
+[data-ornament-style="minimal"] .gift-gonjong-divider::after,
+[data-ornament-style="minimal"] .rsvp-gonjong-divider::after,
+[data-ornament-style="minimal"] .closing-gonjong-divider::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--gold-500);
+  transform: rotate(45deg);
+}
+
+/* 2. Ornament Style: "minimal" (Hides all traditional & floral corner ornaments) */
+[data-ornament-style="minimal"] .cover-gonjong-wrapper,
+[data-ornament-style="minimal"] .couple-gonjong-watermark,
+[data-ornament-style="minimal"] .gift-gonjong-watermark,
+[data-ornament-style="minimal"] .closing-gonjong-bottom,
+[data-ornament-style="minimal"] .ornament-container,
+[data-ornament-style="minimal"] .cover-ornament,
+[data-ornament-style="minimal"] .hero-ornament,
+[data-ornament-style="minimal"] .closing-ornament {
+  display: none !important;
+}
+
+/* 3. Photo Frame Styles: "oval" and "rounded" */
+[data-frame-style="oval"] .cover-photo-arch,
+[data-frame-style="oval"] .portrait-arch-frame {
+  border-radius: 999px !important;
+}
+
+[data-frame-style="rounded"] .cover-photo-arch {
+  border-radius: 16px !important;
+}
+
+[data-frame-style="rounded"] .portrait-arch-frame {
+  border-radius: 22px !important;
+}
+
+/* 4. Ambient Gold Particles Toggle */
+[data-particles="false"] .ambient-dust-container {
+  display: none !important;
+}
+
+/* 5. Dynamic Theme Gradients for Cover, Hero, and Closing Overlays */
+.wedding-page-wrapper .cover-dark-gradient {
+  background: radial-gradient(
+    circle at center 38%,
+    rgba(var(--theme-dark-rgb, 56, 14, 18), 0.72) 0%,
+    rgba(var(--theme-cover-rgb, 26, 7, 9), 0.88) 65%,
+    rgba(var(--theme-cover-rgb, 15, 4, 5), 0.97) 100%
+  ) !important;
+}
+
+.wedding-page-wrapper .hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--theme-cover-rgb, 22, 6, 7), 0.75) 0%,
+    rgba(var(--theme-primary-rgb, 94, 23, 27), 0.48) 45%,
+    rgba(var(--theme-cover-rgb, 22, 6, 7), 0.92) 100%
+  ) !important;
+}
+
+.wedding-page-wrapper .closing-overlay {
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--theme-dark-rgb, 44, 11, 14), 0.75) 0%,
+    rgba(var(--theme-cover-rgb, 22, 6, 7), 0.92) 80%,
+    rgba(var(--theme-cover-rgb, 15, 4, 5), 0.98) 100%
+  ) !important;
+}
+
+

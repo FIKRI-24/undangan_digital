@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="100%" height="100%">
+  <defs>
+    <radialGradient id="coverGlow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#4a1317" />
+      <stop offset="45%" stop-color="#2c0b0e" />
+      <stop offset="100%" stop-color="#140405" />
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1C98E" />
+      <stop offset="50%" stop-color="#C7A15A" />
+      <stop offset="100%" stop-color="#B88A3D" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="900" fill="url(#coverGlow)" />
+
+  <!-- Subtle Vintage Border Pattern -->
+  <rect x="24" y="24" width="552" height="852" rx="16" fill="none" stroke="url(#goldGradient)" stroke-width="1" stroke-opacity="0.35" />
+  <rect x="32" y="32" width="536" height="836" rx="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.5" stroke-dasharray="3 3" stroke-opacity="0.25" />
+
+  <!-- Traditional Arch Motif in Center -->
+  <path d="M150 720 V 380 A 150 150 0 0 1 450 380 V 720" stroke="url(#goldGradient)" stroke-width="1" fill="none" opacity="0.2"/>
+
+  <!-- Traditional Silhouette Motif -->
+  <circle cx="260" cy="410" r="28" fill="#D9A9A3" opacity="0.6"/>
+  <circle cx="340" cy="425" r="26" fill="#F8F2EA" opacity="0.65"/>
+  <path d="M232 400 C 240 375, 280 375, 288 400 Z" fill="#C7A15A" opacity="0.7"/>
+  <polygon points="315,410 340,365 365,410" fill="#E1C98E" opacity="0.7"/>
+
+  <!-- Lower Ambient Vignette -->
+  <rect y="600" width="600" height="300" fill="url(#coverGlow)" opacity="0.8" />
+</svg>

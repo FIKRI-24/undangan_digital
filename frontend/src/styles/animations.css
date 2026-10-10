@@ -1,0 +1,234 @@
+/* ==========================================================================
+   ANIMATIONS — MASTER UNDANGAN DIGITAL PERNIKAHAN
+   Based on PRD Section 25
+   ========================================================================== */
+
+/* Fade Up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Scale Reveal */
+@keyframes scaleReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Floral Reveal */
+@keyframes floralReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) rotate(-3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Vinyl / Music Record Continuous Rotation */
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gentle Pulse for Badges / Icons */
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Floating animation for subtle background elements */
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Cover Exit animation (PRD Section 8) */
+@keyframes coverExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4%) scale(1.03);
+    visibility: hidden;
+  }
+}
+
+/* Utility Animation Classes */
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-scale-reveal {
+  animation: scaleReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-floral {
+  animation: floralReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+.animate-pulse-subtle {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+/* Floating animation for subtle background elements */
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Minangkabau Gonjong Micro Floating Animation */
+@keyframes gonjongFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.gonjong-floating {
+  animation: gonjongFloat 7s ease-in-out infinite;
+}
+
+.gonjong-decoration {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Cover Initial Reveal for Gonjong (Runs immediately on load) */
+@keyframes coverGonjongIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-gonjong-cover {
+  animation: coverGonjongIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Utility Animation Classes */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Vintage Gold Wax Seal Micro-Pulse */
+@keyframes sealPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 4px 12px rgba(199, 161, 90, 0.45));
+  }
+  50% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 6px 18px rgba(199, 161, 90, 0.75));
+  }
+}
+
+.animate-seal-pulse {
+  animation: sealPulse 4s ease-in-out infinite;
+}
+
+/* Ambient Floating Gold Dust Particle Drift */
+@keyframes goldDrift {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-24px) translateX(12px) scale(1.1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(-48px) translateX(-6px) scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+.ambient-dust-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+  user-select: none;
+}
+
+.ambient-dust-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f5dfa8 0%, #c7a15a 60%, rgba(199, 161, 90, 0) 100%);
+  box-shadow: 0 0 8px rgba(199, 161, 90, 0.7);
+  animation: goldDrift var(--drift-duration, 8s) ease-in-out infinite;
+  animation-delay: var(--drift-delay, 0s);
+  pointer-events: none;
+}
+
+/* Accessibility: Respect Reduced Motion (PRD Section 34 & 40) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

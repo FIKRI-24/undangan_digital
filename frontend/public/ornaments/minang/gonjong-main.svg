@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="goldGradientMain" x1="160" y1="0" x2="160" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="30%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#C7A15A" />
+      <stop offset="100%" stop-color="#9E782F" />
+    </linearGradient>
+
+    <linearGradient id="goldHighlight" x1="20" y1="50" x2="300" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B88A3D" stop-opacity="0.4" />
+      <stop offset="25%" stop-color="#E1C98E" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#FFF8E7" stop-opacity="1" />
+      <stop offset="75%" stop-color="#E1C98E" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#B88A3D" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="goldFiligree" x1="160" y1="10" x2="160" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#C7A15A" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+
+  <!-- MAIN ROOF SILHOUETTE BODY (ELEGANT CURVED SADDLE WITH 4 HORNS) -->
+  <path d="M 30 14
+           C 35 34, 48 58, 74 68
+           C 92 54, 100 38, 105 24
+           C 112 42, 126 62, 160 64
+           C 194 62, 208 42, 215 24
+           C 220 38, 228 54, 246 68
+           C 272 58, 285 34, 290 14
+           C 284 38, 270 70, 248 78
+           C 214 86, 185 86, 160 86
+           C 135 86, 106 86, 72 78
+           C 50 70, 36 38, 30 14 Z"
+        fill="url(#goldGradientMain)"
+        fill-opacity="0.88" />
+
+  <!-- PRIMARY UPPER RIDGE OUTLINE (PARABUANG) -->
+  <path d="M 30 14
+           C 35 34, 48 58, 74 68
+           C 92 54, 100 38, 105 24
+           C 112 42, 126 62, 160 64
+           C 194 62, 208 42, 215 24
+           C 220 38, 228 54, 246 68
+           C 272 58, 285 34, 290 14"
+        stroke="url(#goldHighlight)"
+        stroke-width="2.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none" />
+
+  <!-- INNER TIER ARCHITECTURAL HIGHLIGHT CURVES -->
+  <path d="M 38 30 C 44 48, 56 64, 76 70" stroke="url(#goldHighlight)" stroke-width="1" stroke-linecap="round" opacity="0.85" fill="none" />
+  <path d="M 282 30 C 276 48, 264 64, 244 70" stroke="url(#goldHighlight)" stroke-width="1" stroke-linecap="round" opacity="0.85" fill="none" />
+  <path d="M 100 36 C 106 50, 118 64, 145 68" stroke="url(#goldHighlight)" stroke-width="0.9" stroke-linecap="round" opacity="0.8" fill="none" />
+  <path d="M 220 36 C 214 50, 202 64, 175 68" stroke="url(#goldHighlight)" stroke-width="0.9" stroke-linecap="round" opacity="0.8" fill="none" />
+
+  <!-- LOWER EAVES ARCH & CARVED FASCIA -->
+  <path d="M 45 82 Q 160 92 275 82" stroke="url(#goldHighlight)" stroke-width="1.8" stroke-linecap="round" fill="none" />
+  <path d="M 60 88 Q 160 97 260 88" stroke="url(#goldHighlight)" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4" opacity="0.7" fill="none" />
+
+  <!-- GONJONG FINIAL NEEDLE SPIRES (PUCUK RABUANG SPIRES) -->
+  <!-- Left Outer Spire -->
+  <line x1="30" y1="14" x2="30" y2="4" stroke="url(#goldHighlight)" stroke-width="1.6" stroke-linecap="round" />
+  <circle cx="30" cy="4" r="1.5" fill="#FFF8E7" />
+  <circle cx="30" cy="8" r="1" fill="#D4AF37" />
+
+  <!-- Left Inner Spire -->
+  <line x1="105" y1="24" x2="105" y2="15" stroke="url(#goldHighlight)" stroke-width="1.4" stroke-linecap="round" />
+  <circle cx="105" cy="15" r="1.4" fill="#FFF8E7" />
+
+  <!-- Right Inner Spire -->
+  <line x1="215" y1="24" x2="215" y2="15" stroke="url(#goldHighlight)" stroke-width="1.4" stroke-linecap="round" />
+  <circle cx="215" cy="15" r="1.4" fill="#FFF8E7" />
+
+  <!-- Right Outer Spire -->
+  <line x1="290" y1="14" x2="290" y2="4" stroke="url(#goldHighlight)" stroke-width="1.6" stroke-linecap="round" />
+  <circle cx="290" cy="4" r="1.5" fill="#FFF8E7" />
+  <circle cx="290" cy="8" r="1" fill="#D4AF37" />
+
+  <!-- CENTER CREST (MINANG PUCUK RABUANG JEWEL) -->
+  <g transform="translate(160, 62)">
+    <path d="M 0 -10 L 3.5 -3 L 0 0 L -3.5 -3 Z" fill="url(#goldHighlight)" />
+    <circle cx="0" cy="-12" r="1.5" fill="#FFF8E7" />
+    <circle cx="0" cy="12" r="2" fill="#D4AF37" />
+    <circle cx="-14" cy="10" r="1.2" fill="#C7A15A" />
+    <circle cx="14" cy="10" r="1.2" fill="#C7A15A" />
+  </g>
+</svg>

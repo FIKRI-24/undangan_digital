@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 130" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="closingGoldGrad" x1="250" y1="0" x2="250" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.95" />
+      <stop offset="30%" stop-color="#D4AF37" stop-opacity="0.9" />
+      <stop offset="65%" stop-color="#C7A15A" stop-opacity="0.75" />
+      <stop offset="90%" stop-color="#7A2025" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#3D0B0F" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="closingGoldLine" x1="50" y1="50" x2="450" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B88A3D" stop-opacity="0.6"/>
+      <stop offset="20%" stop-color="#E1C98E" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#E1C98E" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#B88A3D" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- SOLID SILHOUETTE BODY EXTENDING DIRECTLY TO BASE (y=130) -->
+  <path d="M 0 130
+           L 30 130
+           C 36 85, 42 45, 50 14
+           C 56 46, 75 78, 115 90
+           C 138 74, 148 50, 155 30
+           C 162 56, 182 82, 250 84
+           C 318 82, 338 56, 345 30
+           C 352 50, 362 74, 385 90
+           C 425 78, 444 46, 450 14
+           C 458 45, 464 85, 470 130
+           L 500 130 Z"
+        fill="url(#closingGoldGrad)" />
+
+  <!-- MAIN ROOF RIDGE LINES (SWEEPING UPWARDS TO 4 HORNS) -->
+  <path d="M 50 14
+           C 56 46, 75 78, 115 90
+           C 138 74, 148 50, 155 30
+           C 162 56, 182 82, 250 84
+           C 318 82, 338 56, 345 30
+           C 352 50, 362 74, 385 90
+           C 425 78, 444 46, 450 14"
+        stroke="url(#closingGoldLine)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+  <!-- SECONDARY TIER ROOF LINES -->
+  <path d="M 58 34 C 66 60, 84 82, 118 88" stroke="#FFF8E7" stroke-width="1.1" stroke-linecap="round" opacity="0.8" fill="none"/>
+  <path d="M 442 34 C 434 60, 416 82, 382 88" stroke="#FFF8E7" stroke-width="1.1" stroke-linecap="round" opacity="0.8" fill="none"/>
+  <path d="M 148 44 C 156 64, 175 80, 225 86" stroke="#FFF8E7" stroke-width="0.9" stroke-linecap="round" opacity="0.75" fill="none"/>
+  <path d="M 352 44 C 344 64, 325 80, 275 86" stroke="#FFF8E7" stroke-width="0.9" stroke-linecap="round" opacity="0.75" fill="none"/>
+
+  <!-- GONJONG SPIRES ON HORN TIPS (PUCUK RABUANG SPIRES) -->
+  <!-- Left outer spire -->
+  <line x1="50" y1="14" x2="50" y2="4" stroke="url(#closingGoldLine)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="50" cy="4" r="1.8" fill="#FFF8E7"/>
+
+  <!-- Left inner spire -->
+  <line x1="155" y1="30" x2="155" y2="18" stroke="url(#closingGoldLine)" stroke-width="1.4" stroke-linecap="round"/>
+  <circle cx="155" cy="18" r="1.5" fill="#FFF8E7"/>
+
+  <!-- Center crest jewel -->
+  <g transform="translate(250, 82)">
+    <polygon points="0,-10 3.5,-3 0,0 -3.5,-3" fill="#FFF8E7"/>
+    <circle cx="0" cy="-12" r="1.5" fill="#FFF8E7"/>
+  </g>
+
+  <!-- Right inner spire -->
+  <line x1="345" y1="30" x2="345" y2="18" stroke="url(#closingGoldLine)" stroke-width="1.4" stroke-linecap="round"/>
+  <circle cx="345" cy="18" r="1.5" fill="#FFF8E7"/>
+
+  <!-- Right outer spire -->
+  <line x1="450" y1="14" x2="450" y2="4" stroke="url(#closingGoldLine)" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="450" cy="4" r="1.8" fill="#FFF8E7"/>
+</svg>

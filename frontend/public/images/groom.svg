@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="groomBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBF7F1" />
+      <stop offset="100%" stop-color="#F8F2EA" />
+    </linearGradient>
+    <linearGradient id="goldArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1C98E" />
+      <stop offset="100%" stop-color="#B88A3D" />
+    </linearGradient>
+    <clipPath id="archClipGroom">
+      <path d="M40 480 V 160 A 160 160 0 0 1 360 160 V 480 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Arch Frame Background -->
+  <path d="M40 480 V 160 A 160 160 0 0 1 360 160 V 480 Z" fill="url(#groomBg)" />
+  <path d="M40 480 V 160 A 160 160 0 0 1 360 160 V 480 Z" stroke="url(#goldArch)" stroke-width="2" fill="none" />
+  <path d="M48 480 V 168 A 152 152 0 0 1 352 168 V 480 Z" stroke="url(#goldArch)" stroke-width="0.8" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+
+  <!-- Inside Clipped Content -->
+  <g clip-path="url(#archClipGroom)">
+    <!-- Ambient tone -->
+    <rect x="40" y="0" width="320" height="500" fill="#2d1013" />
+    
+    <!-- Groom Figure Silhouette -->
+    <!-- Head -->
+    <circle cx="200" cy="200" r="45" fill="#E8C4BD" />
+    
+    <!-- Minang Saluak (Traditional Headwear) -->
+    <path d="M150 180 C 160 130, 240 130, 250 180 Z" fill="#C7A15A" />
+    <path d="M145 180 Q 200 170 255 180 L 250 195 Q 200 185 150 195 Z" fill="#922F35" />
+    <circle cx="200" cy="140" r="5" fill="#B88A3D" />
+
+    <!-- Shoulders & Attire (Burgundy & Gold trim) -->
+    <path d="M110 270 C 130 240, 270 240, 290 270 L 320 480 H 80 Z" fill="#5E171B" />
+    <!-- Gold Vest Details -->
+    <path d="M175 255 L 200 320 L 225 255" stroke="#C7A15A" stroke-width="3" fill="none" />
+    <line x1="200" y1="320" x2="200" y2="480" stroke="#C7A15A" stroke-width="2" />
+    <circle cx="200" cy="350" r="3" fill="#E1C98E" />
+    <circle cx="200" cy="380" r="3" fill="#E1C98E" />
+    <circle cx="200" cy="410" r="3" fill="#E1C98E" />
+  </g>
+</svg>

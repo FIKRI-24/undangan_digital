@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b0f12" />
+      <stop offset="50%" stop-color="#230a0c" />
+      <stop offset="100%" stop-color="#160607" />
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1C98E" />
+      <stop offset="50%" stop-color="#C7A15A" />
+      <stop offset="100%" stop-color="#B88A3D" />
+    </linearGradient>
+    <radialGradient id="softLight" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#7A2025" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#160607" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="url(#heroBg)" />
+  <circle cx="300" cy="350" r="280" fill="url(#softLight)" />
+
+  <!-- Arch Frame -->
+  <path d="M120 700 V 300 A 180 180 0 0 1 480 300 V 700" stroke="url(#goldShine)" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M130 700 V 300 A 170 170 0 0 1 470 300 V 700" stroke="url(#goldShine)" stroke-width="0.8" stroke-dasharray="4 4" fill="none" opacity="0.4"/>
+
+  <!-- Stylized Couple Silhouette -->
+  <!-- Groom -->
+  <circle cx="260" cy="340" r="32" fill="#E8C4BD" opacity="0.85" />
+  <!-- Traditional Saluak / Headwear -->
+  <path d="M230 325 C 240 295, 280 295, 290 325 Z" fill="#C7A15A" />
+  <path d="M215 390 C 215 380, 240 375, 260 375 C 280 375, 305 380, 305 390 V 540 H 215 Z" fill="#5E171B" />
+
+  <!-- Bride -->
+  <circle cx="340" cy="355" r="30" fill="#F8F2EA" opacity="0.9" />
+  <!-- Traditional Suntiang / Crown Silhouette -->
+  <path d="M305 345 C 310 290, 370 290, 375 345 Z" fill="#E1C98E" opacity="0.9" />
+  <polygon points="310,340 340,285 370,340" fill="#C7A15A" opacity="0.85" />
+  <circle cx="340" cy="280" r="6" fill="#B88A3D" />
+  <path d="M300 405 C 300 395, 325 390, 340 390 C 360 390, 385 395, 385 405 V 540 H 300 Z" fill="#711D22" />
+
+  <!-- Floral Garland Base -->
+  <ellipse cx="300" cy="560" rx="140" ry="25" fill="#7A2025" opacity="0.3" />
+</svg>
